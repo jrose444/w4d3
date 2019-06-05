@@ -1,0 +1,23 @@
+<% action = (@user.persisted? ? user_url(@user) : users_url) %>
+<% method = (@user.persisted? ? :patch : :post) %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+
+  <label for="user_name">Username</label>
+  <input
+    type="text"
+    name="user[user_name]"
+    id="user_name"
+    value="<%= @user.user_name %>">  
+
+  <label for="password">Password</label>
+  <input
+    type="password"
+    name="user[password]"
+    id="password"
+    value="<%= @user.password %>">  
+
+    <input type="submit" value="">
+
+</form>
