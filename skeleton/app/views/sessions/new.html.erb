@@ -1,0 +1,15 @@
+<form action="<%=session_url %>"method="post">
+  <label>user_name
+  <input type="text" name="user[user_name]" value= "<%=@user.user_name%>" >
+  </label>
+  <br>
+
+  <label>password
+  <input type="text" name="user[password]" value= "<%=@user.password%>" >
+  </label>
+  <br>
+  
+   <input type="submit" value="submit">
+
+
+</form>
